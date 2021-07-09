@@ -11,11 +11,7 @@ const app = express();
 
 // Logger and Cors middleware for request logging/permission
 app.use(morgan("common"));
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN,
-  })
-);
+app.use(cors());
 
 //Routes
 app.get("/", (req, res) => {
